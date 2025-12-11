@@ -8,10 +8,16 @@ export default function LoginPage() {
   const [activeRole, setActiveRole] = useState("klant");
   const router = useRouter();
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log("Inloggen als:", activeRole);
+function handleSubmit(e) {
+  e.preventDefault();
+
+  if (activeRole === "klant") {
+    // Na inloggen als klant → AI Voice Assistant pagina
+    router.push("/client/ai-voice-assistant");
+  } else {
   }
+}
+
 
   function goToRegister() {
     if (activeRole === "bedrijf") {
