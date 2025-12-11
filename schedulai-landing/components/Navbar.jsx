@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { SignInButton, SignUpButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   return (
@@ -27,12 +29,12 @@ export default function Navbar() {
         </div>
 
         <div className="nav-right">
-          <Link href="/register" className="btn btn-outline">
-            Registreer
-          </Link>
-          <Link href="/login" className="btn btn-primary">
-            Login
-          </Link>
+          <SignUpButton mode="modal">
+            <button className="btn btn-outline">Registreer</button>
+          </SignUpButton>
+          <SignInButton mode="modal">
+            <button className="btn btn-primary">Login</button>
+          </SignInButton>
         </div>
       </div>
     </header>

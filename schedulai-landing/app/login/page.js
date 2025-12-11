@@ -1,19 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-
+import { SignIn } from "@clerk/nextjs";
 
 export default function LoginPage() {
-  const [activeRole, setActiveRole] = useState("klant");
-  const router = useRouter();
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log("Inloggen als:", activeRole);
-  }
-
-  function goToRegister() {
+  return (
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh" }}>
+      <SignIn />
+    </div>
+  );
+}
     if (activeRole === "bedrijf") {
       router.push("/register?type=bedrijf");
     } else {

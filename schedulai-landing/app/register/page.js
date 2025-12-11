@@ -1,16 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { SignUp } from "@clerk/nextjs";
 
 export default function RegisterPage() {
-  const [activeRole, setActiveRole] = useState("klant");
-  const router = useRouter();
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log("Account aanmaken als:", activeRole);
-    // hier komt later jouw echte register-logica
+  return (
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh" }}>
+      <SignUp />
+    </div>
+  );
+}
   }
 
   function goToLogin() {

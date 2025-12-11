@@ -1,4 +1,5 @@
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {
   title: "SchedulAI - Foutloze planning met AI",
@@ -8,8 +9,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="nl">
-      <body>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="nl">
+        <body>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
