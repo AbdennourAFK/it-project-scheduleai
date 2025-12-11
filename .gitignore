@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
+# dependencies3
+schedulai-landing/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -13,8 +13,7 @@
 # testing
 /coverage
 
-# next.js
-/.next/
+# next.jscc
 /out/
 
 # production
@@ -39,3 +38,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/schedulai-landing/.next
+/schedulai-landing/.next
