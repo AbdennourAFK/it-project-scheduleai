@@ -1157,3 +1157,457 @@ body {
     border-radius: 1.4rem;
   }
 }
+
+
+/* ===========================
+   Client dashboard – AI Voice Assistant
+   =========================== */
+
+.client-page {
+  min-height: 100vh;
+  padding: 1.75rem 3rem 3rem;
+  background: radial-gradient(circle at top left, #111827 0, #020617 45%, #02010a 100%);
+  color: #e5e7eb;
+}
+
+/* Topbar */
+.client-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.client-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.client-icon-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+}
+
+.client-user-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.client-user-avatar {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 999px;
+  background: #f97316;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.client-user-name {
+  font-size: 0.78rem;
+}
+
+/* Terug-link */
+.client-back-link {
+  border: none;
+  background: transparent;
+  color: #f97316;
+  font-size: 0.78rem;
+  cursor: pointer;
+  margin-bottom: 0.6rem;
+}
+
+/* Header section */
+.client-header-section {
+  margin-bottom: 1.3rem;
+}
+
+.client-breadcrumb-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.client-breadcrumb-icon {
+  font-size: 0.9rem;
+}
+
+.client-page-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.client-page-subtitle {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.client-toggle-row {
+  margin-top: 1rem;
+  display: inline-flex;
+  gap: 0.7rem;
+}
+
+.client-toggle-btn {
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(75, 85, 99, 0.9);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.client-toggle-btn-active {
+  background: linear-gradient(135deg, #f97316, #f97316);
+  border-color: #fb923c;
+  box-shadow: 0 0 25px rgba(249, 115, 22, 0.5);
+}
+
+/* Main 2 kolommen */
+.client-main {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1.8rem;
+  align-items: flex-start;
+}
+
+.client-column-left {
+  flex: 3;
+}
+
+.client-column-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+/* Kaarten */
+.client-card {
+  background: radial-gradient(circle at top left, #111827 0, #020617 55%);
+  border-radius: 1.3rem;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  padding: 1.2rem 1.3rem;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.65);
+}
+
+.client-card-main {
+  padding: 1.4rem 1.5rem 1.5rem;
+}
+
+.client-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.client-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.client-icon-circle {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.client-icon-circle-orange {
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+}
+
+.client-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.client-card-subtitle {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.client-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(22, 163, 74, 0.18);
+  color: #bbf7d0;
+  font-size: 0.75rem;
+}
+
+.client-status-dot {
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 999px;
+  background: #22c55e;
+}
+
+/* Inner card binnen main card */
+.client-inner-card {
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 0.85rem 0.9rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px dashed rgba(75, 85, 99, 0.9);
+}
+
+.client-inner-card-header {
+  margin-bottom: 0.5rem;
+}
+
+.client-inner-card-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.client-inner-card-sub {
+  display: block;
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin-top: 0.1rem;
+}
+
+.client-list {
+  margin-top: 0.6rem;
+  padding-left: 1.1rem;
+  font-size: 0.78rem;
+  color: #d1d5db;
+}
+
+/* Feature grid */
+.client-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1.1rem;
+}
+
+.client-feature-card {
+  border-radius: 0.9rem;
+  padding: 0.8rem 0.85rem;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.client-feature-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  margin-bottom: 0.45rem;
+}
+
+.client-feature-icon-blue {
+  background: rgba(56, 189, 248, 0.2);
+}
+
+.client-feature-icon-purple {
+  background: rgba(168, 85, 247, 0.25);
+}
+
+.client-feature-icon-green {
+  background: rgba(34, 197, 94, 0.25);
+}
+
+.client-feature-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.client-feature-text {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+/* Call footer + knop */
+.client-call-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.4rem;
+  padding-top: 0.9rem;
+  margin-top: 0.7rem;
+  border-top: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.client-call-info {
+  flex: 1;
+}
+
+.client-call-info-right {
+  text-align: right;
+}
+
+.client-call-label {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.client-call-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.client-call-phone {
+  font-size: 0.8rem;
+  color: #f97316;
+  margin-top: 0.2rem;
+}
+
+.client-inline-link {
+  border: none;
+  background: transparent;
+  color: #f97316;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0;
+}
+
+.client-primary-btn {
+  margin-top: 1.1rem;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0b1120;
+  background: linear-gradient(135deg, #f97316, #f97316);
+  box-shadow: 0 20px 40px rgba(249, 115, 22, 0.55);
+}
+
+/* Rechterkolom kaarten */
+.client-card-header-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.client-card-header-icon {
+  font-size: 1rem;
+}
+
+.client-card-header-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.client-steps-list {
+  list-style: none;
+  margin: 0.2rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.client-step-number {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.15);
+  color: #f97316;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-right: 0.6rem;
+}
+
+.client-steps-list li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.client-step-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.client-step-text {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+/* Voordelen + tips */
+.client-benefits-list,
+.client-tips-list {
+  list-style: none;
+  margin: 0.2rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.client-benefit-icon {
+  font-size: 0.95rem;
+  margin-right: 0.6rem;
+}
+
+.client-benefits-list li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.client-benefit-title {
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.client-benefit-text {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.client-card-warning {
+  border-color: rgba(249, 115, 22, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .client-page {
+    padding: 1.25rem 1.2rem 2rem;
+  }
+
+  .client-main {
+    flex-direction: column;
+  }
+
+  .client-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
