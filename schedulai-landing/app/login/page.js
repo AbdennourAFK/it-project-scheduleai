@@ -14,7 +14,7 @@ export default function LoginPage() {
     } else {
       router.push("/register?type=klant");
     }
-  }
+  
 
   return (
     <main className="login-page">
@@ -169,4 +169,4 @@ export default function LoginPage() {
       </div>
     </main>
   );
-}
+
