@@ -1,11 +1,85 @@
 "use client";
 
+import { useState } from "react";
 import { SignUp } from "@clerk/nextjs";
 
 export default function RegisterPage() {
+  const [userType, setUserType] = useState(null); // null, "klant", or "bedrijf"
+
+  if (!userType) {
+    return (
+      <main className="login-page">
+        <div className="login-card register-card">
+          {/* Logo + Titel */}
+          <div className="login-header">
+            <div className="login-logo-box">
+              <span className="login-logo-icon">📅</span>
+            </div>
+            <span className="login-logo-text">SchedulAI</span>
+          </div>
+
+          <h1 className="login-title">Maak je account</h1>
+          <p className="login-subtitle">Kies je accounttype om te beginnen</p>
+
+          {/* Rollen (Klant / Bedrijf) */}
+          <div className="login-role-toggle">
+            <button
+              type="button"
+              className="login-role-btn login-role-btn-active"
+              onClick={() => setUserType("klant")}
+            >
+              Klant
+            </button>
+
+            <button
+              type="button"
+              className="login-role-btn"
+              onClick={() => setUserType("bedrijf")}
+            >
+              Bedrijf
+            </button>
+          </div>
+
+          {/* Info-melding */}
+          <div className="login-info-box">
+            <span className="login-info-dot" />
+            <span className="login-info-text">
+              {userType === "klant"
+                ? "Maak een account om direct afspraken te kunnen boeken"
+                : "Start met SchedulAI en automatiseer je afspraakplanning"}
+            </span>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh" }}>
-      <SignUp />
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh", padding: "20px" }}>
+      <div style={{ position: "relative", width: "100%", maxWidth: "500px" }}>
+        {/* Terug knop */}
+        <button
+          onClick={() => setUserType(null)}
+          style={{
+            position: "absolute",
+            top: "-40px",
+            left: "0",
+            background: "none",
+            border: "none",
+            color: "#fff",
+            cursor: "pointer",
+            fontSize: "16px",
+            zIndex: 10
+          }}
+        >
+          ← Terug
+        </button>
+        
+        {/* Clerk SignUp */}
+        <SignUp
+          redirectUrl={userType === "bedrijf" ? "/bedrijf-dashboard" : "/klant-dashboard"}
+        />
+      </div>
     </div>
   );
 }
